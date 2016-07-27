@@ -31,7 +31,9 @@
                             <constraint firstItem="el9-Qh-YD2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="O7E-bT-Z8o"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="1qW-EY-6Sv"/>
+                    <navigationItem key="navigationItem" id="1qW-EY-6Sv">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="apJ-er-b9n"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -52,6 +54,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywh-hl-Ncp">
                                 <rect key="frame" x="283" y="266" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="OMW-fz-O18" kind="unwind" identifier="unwindFromViewController" unwindAction="unwindToRootViewController:" id="d5w-qS-BMD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuR-LI-vAb">
                                 <rect key="frame" x="272" y="304" width="56" height="30"/>
@@ -71,6 +76,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b31-So-Rq0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="OMW-fz-O18" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1705" y="669"/>
         </scene>
@@ -89,12 +95,16 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zfk-Du-vJS">
                                 <rect key="frame" x="283" y="285" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="bYa-Rt-UIi" kind="unwind" unwindAction="unwindToRootViewController:" id="V9z-kA-3bc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrV-ya-j6v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bYa-Rt-UIi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2417" y="669"/>
         </scene>
