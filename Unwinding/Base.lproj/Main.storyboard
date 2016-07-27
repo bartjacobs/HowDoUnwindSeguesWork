@@ -32,12 +32,49 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1qW-EY-6Sv">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="apJ-er-b9n"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="apJ-er-b9n">
+                            <connections>
+                                <segue destination="vrj-kS-QGI" kind="presentation" id="5bf-GS-Gu8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1004" y="669"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ANp-hO-mae">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CdA-Ox-wdo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="K88-FE-sqT" userLabel="Exit" sceneMemberID="exit"/>
+                <viewController id="3UX-7f-jWc" customClass="ViewController" customModule="Unwinding" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I25-Q8-BDb"/>
+                        <viewControllerLayoutGuide type="bottom" id="SIH-9F-c8a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TUq-So-0Z4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8GO-F6-m3b">
+                                <rect key="frame" x="273" y="285" width="54" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <segue destination="K88-FE-sqT" kind="unwind" unwindAction="unwindToRootViewController:" id="7Kz-f7-FsI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8GO-F6-m3b" firstAttribute="centerY" secondItem="TUq-So-0Z4" secondAttribute="centerY" id="7Kf-AJ-U71"/>
+                            <constraint firstItem="8GO-F6-m3b" firstAttribute="centerX" secondItem="TUq-So-0Z4" secondAttribute="centerX" id="qDE-le-SRO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="65J-xd-V6l"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1705" y="1391"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="7oY-R4-gII">
@@ -125,6 +162,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wSu-C4-fFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="290" y="669"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sEd-iz-xvC">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c80-X4-PBj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vrj-kS-QGI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qt8-D9-MZm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3UX-7f-jWc" kind="relationship" relationship="rootViewController" id="90J-ki-Vw5"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1004" y="1391"/>
         </scene>
     </scenes>
 </document>
